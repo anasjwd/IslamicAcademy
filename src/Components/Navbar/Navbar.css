@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   padding: 8px 7%;
-  background: white;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,10 +21,30 @@ ul {
 }
 
 ul li {
+  color: white;
   margin: 10px 15px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
+}
+
+.sign-in-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 20px;
+}
+
+.sign-in-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
 }
 
 .toggle-icon {
