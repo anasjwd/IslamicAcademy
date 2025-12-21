@@ -13,7 +13,8 @@ const Navbar = ({theme, setTheme}) => {
   
   return (
     <div className='navbar'>
-      <img src={logo_white} alt="" className='logo'/>
+      {/* <img onClick={()=>{toggle_mode()}} src={theme === 'light' ? toggle_dark : toggle_light} alt="" className='toggle-icon'/> */}
+      <button className='sign-in-btn'>تسجيل الدخول</button>
       <ul>
         <li>section1</li>
         <li>section2</li>
@@ -21,8 +22,7 @@ const Navbar = ({theme, setTheme}) => {
         <li>section4</li>
         <li>section5</li>
       </ul>
-      <button className='sign-in-btn'>تسجيل الدخول</button>
-      <img onClick={()=>{toggle_mode()}} src={theme === 'light' ? toggle_dark : toggle_light} alt="" className='toggle-icon'/>
+      <img src={logo_white} alt="" className='logo'/>
     </div>
   )
 }

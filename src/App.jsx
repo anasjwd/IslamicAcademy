@@ -18,8 +18,8 @@ const App = () => {
       <div className={`container ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme} />
         <Hero/>
-      </div>
       <Stats/>
+      </div>
       <Programs/>
     </div>
   );
