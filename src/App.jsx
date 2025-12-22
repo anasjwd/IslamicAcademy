@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero"
 import Stats from "./Components/Stats/Stats"
 import Programs from "./Components/Programs/Programs"
+import backgroundVideo from "./assets/background.mp4"
 import './App.css'
 
 const App = () => {
@@ -16,9 +17,12 @@ const App = () => {
   return (
     <div>
       <div className={`container ${theme}`}>
+        <video className="video-background" autoPlay loop muted playsInline>
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+        <div className="video-overlay"></div>
         <Navbar theme={theme} setTheme={setTheme} />
         <Hero/>
-      <Stats/>
       </div>
       <Programs/>
     </div>

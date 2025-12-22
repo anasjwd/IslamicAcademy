@@ -1,15 +1,29 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  padding: 8px 7%;
+  padding: 8px 5%;
   background: transparent;
   align-items: center;
 }
 
-.logo {
-  width: 120px;
-  cursor: pointer;  
+.sign-in-btn {
+  background: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #2c3e50;
+}
+
+.sign-in-btn:hover {
+  background: #f0f0f0;
+  color: #1e3a5f;
+  transform: translateY(-2px);
+  box-shadow: -1px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 ul {
@@ -25,32 +39,28 @@ ul li {
   margin: 10px 15px;
   cursor: pointer;
   font-size: 15px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-ul li:hover {
-}
-
-.toggle-icon {
-  cursor: pointer;
-  width: 24px;
-  margin-right: 20px;
-}
-
-.sign-in-btn {
+ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 500;
+  transition: width 0.3s ease;
+}
+
+ul li:hover::after {
+  width: 100%;
+}
+  
+.logo {
+  width: 120px;
   cursor: pointer;
-  /* margin-left: 20px; */
-  transition: all 0.3s;
 }
-
-.sign-in-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: -1px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
+  
+  
