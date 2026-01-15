@@ -1,0 +1,175 @@
+.Instructors {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    padding: 80px 5%;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructors-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.instructors-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.instructors-description {
+    font-size: 1.2rem;
+    color: #6c757d;
+    line-height: 1.8;
+    font-family: 'Cairo', sans-serif;
+}
+
+.instructors-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.instructor-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px 30px;
+    width: 380px;
+    max-width: 90%;
+    position: relative;
+}
+
+.instructor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(39, 174, 96, 0.2);
+}
+
+.instructor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.instructor-card:hover::before {
+    transform: scaleX(1);
+}
+
+.instructor-image-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #27ae60;
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.2);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.instructor-card:hover .instructor-image-wrapper {
+    transform: scale(1.05);
+    border-color: #2ecc71;
+}
+
+.instructor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instructor-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructor-name {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+.instructor-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.instructor-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.instructor-degree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #34495e;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.degree-icon {
+    font-size: 1.2rem;
+}
+
+.instructor-bio {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .Instructors {
+        padding: 50px 3%;
+    }
+    
+    .instructors-title {
+        font-size: 2.2rem;
+    }
+    
+    .instructors-description {
+        font-size: 1rem;
+    }
+    
+    .instructor-card {
+        padding: 30px 20px 25px;
+    }
+}

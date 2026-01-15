@@ -9,23 +9,15 @@
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), white);
-    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-content {
     max-width: 900px;
     color: white;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {

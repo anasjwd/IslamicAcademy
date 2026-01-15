@@ -1,30 +1,42 @@
-import './Navbar.css'
-import logo_white from '../../assets/logo-white.png';
-// import logo_black from '../../assets/logo-black.png';
-// import search_whiteاليوم. from '../../assets/search-w.png';
-// import search_black from '../../assets/search-b.png';
-import toggle_light from '../../assets/day.png';
-import toggle_dark from '../../assets/night.png';
+import { useEffect, useState } from "react";
+import "./Navbar.css";
+import logo_white from "../../assets/logo-white.png";
 
-const Navbar = ({theme, setTheme}) => {
-  const toggle_mode = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  }
-  
+const Navbar = ({ theme, setTheme }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div className='navbar'>
-      {/* <img onClick={()=>{toggle_mode()}} src={theme === 'light' ? toggle_dark : toggle_light} alt="" className='toggle-icon'/> */}
-      <button className='sign-in-btn'>تسجيل الدخول</button>
+    <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+      <img src={logo_white} alt="دار البيان" className="logo" />
       <ul>
-        <li>section1</li>
-        <li>section2</li>
-        <li>section3</li>
-        <li>section4</li>
-        <li>section5</li>
+        <li onClick={() => scrollToSection("home")}>الرئيسية</li>
+        <li onClick={() => scrollToSection("programs")}>برامجنا التعليمية</li>
+        <li onClick={() => scrollToSection("instructors")}>طاقمنا التدريسي</li>
+        <li onClick={() => scrollToSection("testimonials")}>قالوا عنا</li>
       </ul>
-      <img src={logo_white} alt="" className='logo'/>
+      <button className="sign-in-btn">تسجيل الدخول</button>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;

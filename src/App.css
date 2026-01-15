@@ -6,6 +6,18 @@
   overflow: hidden;
 }
 
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(248, 249, 250, 0.3) 30%, rgba(248, 249, 250, 0.7) 60%, #f8f9fa 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .video-background {
   position: absolute;
   top: 0;
