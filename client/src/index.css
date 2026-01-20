@@ -1,0 +1,82 @@
+/* =============================================
+   GLOBAL STYLES - Mobile First Responsive Design
+   Base styles (320px+), Tablet (481px+), Desktop (769px+)
+   ============================================= */
+
+@font-face {
+  font-family: 'BouazziMaghribi';
+  src: url('/BouazziMaghribi.woff');
+  font-display: swap;
+}
+
+/* CSS Reset & Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Touch-friendly defaults */
+a, button {
+  touch-action: manipulation;
+}
+
+/* Improve image handling */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container base styles */
+.container {
+  width: 100%;
+  min-height: 50vh;
+  transition: 0.5s;
+}
+
+.container.dark {
+  background: #222;
+}
+
+/* Prevent horizontal scroll from animations */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Mobile-first font sizes */
+h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+h6 { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+
+/* Ensure proper tap target sizes on mobile */
+@media (max-width: 480px) {
+  button, 
+  a, 
+  input, 
+  select, 
+  textarea {
+    min-height: 44px;
+  }
+}

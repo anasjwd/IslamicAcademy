@@ -1,0 +1,264 @@
+/* =============================================
+   PROGRAMS SECTION - Mobile-First Design
+   ============================================= */
+
+.Programs {
+    background: #f8f9fa;
+    padding: 3rem 3%;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.programs-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Fluid typography for section titles */
+.programs-title {
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'BouazziMaghribi', 'Cairo', sans-serif;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3d7a9e;
+    display: inline-block;
+}
+
+.programs-description {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #6c757d;
+    line-height: 1.8;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Horizontal scrolling container */
+.programs-cards {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem 0.5rem 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Custom scrollbar */
+.programs-cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.programs-cards::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.programs-cards::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #1a6b7a, #2d8a9b);
+    border-radius: 10px;
+}
+
+.programs-cards::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #145a67, #1a6b7a);
+}
+
+/* Program cards - Mobile first */
+.card {
+    background: linear-gradient(135deg, #1a6b7a 0%, #2d8a9b 100%);
+    border: none;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    min-height: 450px;
+    min-width: 280px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.label {
+    display: inline-block;
+    background: white;
+    color: #1a6b7a;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.label:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    color: white;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'BouazziMaghribi', 'Cairo', sans-serif;
+}
+
+.card-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+    font-family: 'Cairo', sans-serif;
+}
+
+.price-section {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.price-main {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-value {
+    font-size: 1.5rem;
+}
+
+.duration-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-family: 'Cairo', sans-serif;
+}
+
+.duration-icon {
+    font-size: 1.2rem;
+}
+
+/* Touch-friendly join button */
+.join-btn-full {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: white;
+    color: #1a6b7a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0 0 1.25rem 1.25rem;
+    min-height: 50px;
+}
+
+.join-btn-full:hover {
+    background: #f0f0f0;
+    transform: scale(1.02);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================
+   TABLET BREAKPOINT (481px - 768px)
+   ============================================= */
+@media (min-width: 481px) {
+    .Programs {
+        padding: 4rem 4%;
+    }
+    
+    .programs-header {
+        margin-bottom: 3rem;
+    }
+    
+    .card {
+        min-width: 320px;
+        max-width: 320px;
+        min-height: 480px;
+    }
+    
+    .card-content {
+        padding: 2rem;
+    }
+    
+    .programs-cards {
+        gap: 1.5rem;
+        padding: 1.25rem 1rem 1.75rem;
+    }
+}
+
+/* =============================================
+   DESKTOP BREAKPOINT (769px+)
+   ============================================= */
+@media (min-width: 769px) {
+    .Programs {
+        padding: 5rem 5%;
+    }
+    
+    .programs-header {
+        margin-bottom: 3.75rem;
+    }
+    
+    .card {
+        min-width: 350px;
+        max-width: 350px;
+        min-height: 500px;
+    }
+    
+    .card-content {
+        padding: 2.2rem;
+    }
+    
+    .price-main,
+    .price-value {
+        font-size: 1.8rem;
+    }
+    
+    .join-btn-full {
+        padding: 1.25rem;
+        font-size: 1.3rem;
+    }
+    
+    .programs-cards {
+        gap: 1.875rem;
+        padding: 1.25rem 0.625rem 1.875rem;
+    }
+}   

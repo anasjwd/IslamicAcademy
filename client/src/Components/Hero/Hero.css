@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&family=Rakkas&family=Reem+Kufi:wght@400..700&display=swap');
+
+@font-face {
+  font-family: 'BouazziMaghribi';
+  src: url('/BouazziMaghribi-Regular.woff') format('woff');
+}
+
+/* =============================================
+   HERO SECTION - Mobile-First Design
+   ============================================= */
+
+.hero {
+    flex: 1;
+    direction: rtl;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.hero-content {
+    max-width: 900px;
+    width: 100%;
+    color: white;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fluid typography using clamp() */
+.hero-title {
+    font-family: 'BouazziMaghribi', 'Rakkas', sans-serif;
+    font-size: clamp(3rem, 12vw, 11.25rem);
+    text-shadow: 5px 5px 2px #032b4666;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.hero-slogan {
+    font-family: 'BouazziMaghribi', 'Aref Ruqaa', serif;
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 0 2px 10px rgba(3, 26, 56, 0.4);
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.hero-description {
+    margin-top: 1.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    line-height: 1.9;
+    font-weight: 500;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.3px;
+    padding: 0 0.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+/* Touch-friendly buttons with minimum 44px tap target */
+.btn {
+    padding: 1rem 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.125rem);
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-height: 48px;
+    min-width: 140px;
+}
+
+.btn-primary {
+    background: white;
+    color: #1B385F;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* =============================================
+   TABLET BREAKPOINT (481px - 768px)
+   ============================================= */
+@media (min-width: 481px) {
+    .hero-content {
+        padding: 0 2rem;
+    }
+    
+    .hero-description {
+        margin-top: 2rem;
+        line-height: 2;
+    }
+    
+    .hero-buttons {
+        margin-top: 2.5rem;
+        gap: 1.25rem;
+    }
+    
+    .btn {
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* =============================================
+   DESKTOP BREAKPOINT (769px+)
+   ============================================= */
+@media (min-width: 769px) {
+    .hero {
+        padding: 0;
+    }
+    
+    .hero-content {
+        padding: 0 1.25rem;
+    }
+    
+    .hero-description {
+        margin-top: 1.875rem;
+    }
+    
+    .hero-buttons {
+        margin-top: 3.125rem;
+    }
+}
+

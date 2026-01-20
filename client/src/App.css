@@ -1,0 +1,76 @@
+/* =============================================
+   APP CONTAINER - Mobile First Responsive Design
+   Base styles (320px+), Tablet (481px+), Desktop (769px+)
+   ============================================= */
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Gradient overlay at bottom */
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(248, 249, 250, 0.3) 30%, rgba(248, 249, 250, 0.7) 60%, #f8f9fa 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Video Background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -2;
+  transform: scale(1.1);
+}
+
+/* Video Overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5dade266;
+  z-index: -1;
+}
+
+/* =============================================
+   TABLET BREAKPOINT (481px - 768px)
+   ============================================= */
+@media (min-width: 481px) {
+  .container::after {
+    height: 175px;
+  }
+  
+  .video-background {
+    transform: scale(1.15);
+  }
+}
+
+/* =============================================
+   DESKTOP BREAKPOINT (769px+)
+   ============================================= */
+@media (min-width: 769px) {
+  .container::after {
+    height: 200px;
+  }
+  
+  .video-background {
+    transform: scale(1.2);
+  }
+}
